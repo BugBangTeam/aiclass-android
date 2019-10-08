@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/default_bg">
+
+    <RelativeLayout
+            android:id="@+id/mRlWebView"
+            android:layout_width="960px"
+            android:layout_height="640px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32px">
+
+        <WebView
+                android:id="@+id/mWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <include layout="@layout/include_webview_error"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/mRlTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="473px"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="23px"
+            android:background="@drawable/bg_round"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/mRlWebView"
+            android:layout_alignTop="@id/mRlWebView">
+
+        <RelativeLayout
+                android:id="@+id/mRlTeacherTitle"
+                android:layout_width="match_parent"
+                android:layout_height="76px">
+
+            <ImageView
+                    android:id="@+id/mIvBack"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="24px"
+                    android:paddingRight="24px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_back"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+                android:id="@+id/mFlTeacher"
+                android:layout_below="@id/mRlTeacherTitle"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="234px">
+
+            <com.acadsoc.aiclass.widget.CustomGSYVideoPlayer
+                    android:id="@+id/mVideoPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/mFlTeacher">
+
+            <TextView
+                    android:id="@+id/mTvLessonName"
+                    android:text="Lesson one our beautiful earth."
+                    android:textSize="28px"
+                    android:textColor="@color/color_text_333"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:includeFontPadding="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="26px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/mTvTeacherName"
+                    android:text="Mia.Tina.devade"
+                    android:textSize="22px"
+                    android:textColor="@color/color_text_333"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:includeFontPadding="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/mRlStudent"
+            android:layout_width="match_parent"
+            android:layout_height="155px"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="23px"
+            android:background="@drawable/bg_round"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/mRlWebView"
+            android:layout_alignBottom="@id/mRlWebView">
+
+        <FrameLayout
+                android:id="@+id/mFlStudent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content">
+
+            <com.acadsoc.aiclass.widget.AutoFitTextureView
+                    android:id="@+id/mTextureView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+                android:layout_toRightOf="@id/mFlStudent"
+                android:layout_width="match_parent"
+                android:layout_height="155px">
+
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48px"
+                    android:layout_centerHorizontal="true">
+
+                <ImageView
+                        android:id="@+id/mIvScore"
+                        android:src="@mipmap/icon_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+                <TextView
+                        android:layout_toRightOf="@id/mIvScore"
+                        android:layout_marginLeft="13px"
+                        android:id="@+id/mTvStudentScore"
+                        android:text="58"
+                        android:textSize="24px"
+                        android:textColor="@color/color_text_333"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/mTvStudentName"
+                    android:text="Mia.Tina"
+                    android:textSize="22px"
+                    android:textColor="@color/color_text_333"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:includeFontPadding="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

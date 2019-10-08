@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">阿卡索AI课堂</string>
+
+    <string name="tag_all">no_relayout_all</string>
+    <string name="tag_current">no_relayout_current</string>
+
+</resources>
